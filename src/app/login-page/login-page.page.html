@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Connexion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="registerForm" (ngSubmit)="submit()" novalidate>
+    <ion-item>
+      <ion-label position="stacked">Nom d'utilisateur</ion-label>
+      <ion-input type="text" formControlName="pseudo"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Mot de passe</ion-label>
+      <ion-input type="password" formControlName="mdp"></ion-input>
+    </ion-item>
+    <ion-button type="submit" [disabled]="!registerForm.valid">Valider</ion-button>
+  </form>
+</ion-content>
