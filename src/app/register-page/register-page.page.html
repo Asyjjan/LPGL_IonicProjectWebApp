@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Inscription</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="registerForm" (ngSubmit)="submit()" novalidate>
+    
+
+    <ion-item>
+      <ion-label position="stacked">Nom</ion-label>
+      <ion-input type="text" formControlName="nom"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Prénom</ion-label>
+      <ion-input type="text" formControlName="prenom"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked" >Adresse mail</ion-label>
+      <ion-input type="text" formControlName="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Nom d'utilisateur</ion-label>
+      <ion-input type="text" formControlName="pseudo"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Mot de passe</ion-label>
+      <ion-input type="text" formControlName="mdp"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">N° de téléphone</ion-label>
+      <ion-input type="text" formControlName="telephone"></ion-input>
+    </ion-item>
+    <ion-button type="submit" [disabled]="!registerForm.valid">Valider</ion-button>
+  </form>
+</ion-content>
