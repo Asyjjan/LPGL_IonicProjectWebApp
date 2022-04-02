@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import {create , findAll} from '../../services/userServices'
+import { ToastController } from '@ionic/angular';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-register-page',
@@ -9,20 +12,31 @@ import { Validators, FormBuilder, FormGroup, FormControl } from '@angular/forms'
 export class RegisterPagePage implements OnInit {
   
   registerForm;
-  constructor(private formBuilder:FormBuilder) {
+
+  constructor(private formBuilder:FormBuilder,public toastController: ToastController, private router: Router) {
     this.registerForm = this.formBuilder.group({
-      pseudo : [""], 
-      mdp: [""],
+      pseudo : ["",[Validators.required]], 
+      mdp: ["",[Validators.required]],
       email:["",[Validators.required, Validators.email]],
-      telephone : ["" , [Validators.required, Validators.minLength(10), Validators.maxLength(10), Validators.pattern("^((06)|(07))[0-9]{8}$")]],
-      nom :[""],
-      prenom : [""],
+      telephone : ["", [Validators.required, Validators.minLength(10), Validators.maxLength(10), Validators.pattern("^((06)|(07))[0-9]{8}$")]],
+      nom :["",[Validators.required]],
+      prenom : ["",[Validators.required]],
     });
    }
 
   submit(){
-      console.log(this.registerForm.value)
-
+    const user = {...this.registerForm.value}
+    const response = create(user);
+    this.success();
+    this.router.navigate(["/login"]);
+    
+  }
+  async success(){
+    const toast = await this.toastController.create({
+      message: 'Inscription réalisée avec succès',
+      duration: 3000
+    });
+    toast.present();
   }
   ngOnInit() {
   }
