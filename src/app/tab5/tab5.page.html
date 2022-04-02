@@ -1,17 +1,43 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Recherche
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<div class="header">
+  <ion-header [translucent]="true">
     <ion-toolbar>
-      <ion-title size="large">Tab 5</ion-title>
+      <ion-title>
+        Recherche
+      </ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 5 page"></app-explore-container>
-</ion-content>
+
+
+  <h2>Profil</h2>
+  <div class="space">
+    <div class="name">
+      <h3>Nom & prénom</h3>
+    </div>
+    <div class="flex">
+      <img class="img-profil" src="../../assets/mignon.jpg" alt="user">
+    </div>
+  </div>
+</div>
+
+<ion-chip>
+  <ion-label>Nom & prenom</ion-label>
+</ion-chip>
+
+<ion-chip color="secondary">
+  <ion-label color="dark">Adresse email</ion-label>
+</ion-chip>
+
+<ion-chip color="secondary">
+  <ion-label color="dark">Téléphone</ion-label>
+</ion-chip>
+
+<ion-chip color="secondary">
+  <ion-label color="dark">adresse/secteur</ion-label>
+</ion-chip>
+
+<ion-chip color="secondary">
+  <ion-text color="dark">Préférences</ion-text>
+</ion-chip>
+
+<ion-button color="success">Modifier</ion-button>
