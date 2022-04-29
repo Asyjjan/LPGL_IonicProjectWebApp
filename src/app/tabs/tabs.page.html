@@ -28,3 +28,71 @@
   </ion-tab-bar>
 
 </ion-tabs>
+
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Recherche
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 1</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <div class="header">
+    <h2>Profil</h2>
+    <div class="space">
+      <div class="name">
+        <h3>Nom & prénom</h3>
+      </div>
+      <div class="flex">
+        <div class="border-green">
+          <div class="border-white">
+            <div class="img-box">
+              <img class="img-profil" src="../../assets/mignon.jpg" alt="user">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div padding>
+      <ion-segment [(ngModel)]="pet">
+        <ion-segment-button value="kittens">
+          Kittens
+        </ion-segment-button>
+        <ion-segment-button value="puppies">
+          Puppies
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+
+    <div [ngSwitch]="pet">
+      <ion-list *ngSwitchCase="'puppies'">
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="../../assets/image.jpg">
+          </ion-thumbnail>
+          <h2>Ruby</h2>
+        </ion-item>
+        ...
+      </ion-list>
+
+      <ion-list *ngSwitchCase="'kittens'">
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="../../assets/image.jpg">
+          </ion-thumbnail>
+          <h2>Luna</h2>
+        </ion-item>
+        ...
+      </ion-list>
+    </div>
+
+    <ion-button color="success">Modifier</ion-button>
