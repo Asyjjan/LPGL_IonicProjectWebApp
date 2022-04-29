@@ -49,6 +49,11 @@ export class LoginPagePage implements OnInit {
     });
     toast.present();
   }
+
+  ionViewWillEnter(){
+    if(this.authGuardService.getAuthenticated())
+      this.router.navigate(['/']);
+  }
   ngOnInit() {
   }
 
