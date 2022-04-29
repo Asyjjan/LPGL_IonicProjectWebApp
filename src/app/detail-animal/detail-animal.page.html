@@ -1,30 +1,36 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Detail Animal</ion-title>
+    <ion-title>Détails</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div class="margin">
-  <div class="center">
-    <img src="..\assets\bergerAllemand.jpg" class="center"/>
+    <div class="center">
+      <img src="..\assets\bergerAllemand.jpg" class="center" />
+    </div>
+    <div class="textPolice">
+      <div class="div-nomAnimal">Ruby</div>
+      <div class="div-info1">
+        <div>Espèce: Chien</div>
+        <div class="textalignRight">Race: Berger Allemand</div>
+      </div>
+      <div class="div-info2">
+        <div>Genre: M</div>
+        <div class="textalignCenter">Poids: 35kg</div>
+        <div class="textalignRight">Taille: 1m10</div>
+      </div>
+      <div class="div-info3">
+        <div>Date de naissance: 12/03/2017</div>
+        <div class="textalignRight">Age: 5 ans</div>
+      </div>
+      <div>Caractère: c'est un gentil chien</div>
+      <div>Description: Beaux berger allemand de 5 ans trés joueur en recherche d'une famille plein d'amour.</div>
+      <div>Information de santé: aucune</div>
+      <div>Localisation actuelle: Reims</div>
+    </div>
   </div>
-  <div class="textPolice">
-    <h5>Gregoir</h5>
-    Race: Berger Allemand<br />
-    Genre: M<br />
-    Poids: 35kg<br />
-    Taille: 1m10<br />
-    Date de naissance: 12/03/2017<br />
-    Age: 5 ans<br />
-    Caractère: c'est un gentil chien<br />
-    Description: Beaux berger allemand de 5 ans trés joueur en recherche d'une famille plein d'amour. <br />
-    <br />
-    Information de santé: aucune<br />
-    Localisation actuelle: Reims<br />
-  </div>
-</div>
 </ion-content>

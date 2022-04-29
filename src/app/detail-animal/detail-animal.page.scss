@@ -1,3 +1,10 @@
+ion-toolbar{
+    --background: green;
+    --color:white;
+}
+ion-content{
+    --background:rgb(223, 247, 223);
+}
 .margin{
     margin-left: 2%;
     margin-right: 2%;
@@ -9,5 +16,35 @@
     justify-content: center;
 }
 .textPolice{
+    margin-top: 5px;
+    padding: 10px;
     font-family:"Comic Sans";
+    line-height: 1.5;
+    background-color: rgb(174, 204, 174);
+}
+.div-nomAnimal{
+    font-weight: 900;
+    font-size:30px;
+    text-align: center;
+}
+.div-info1{
+    display : grid;
+    grid-template-columns : 1fr 1fr;
+    grid-gap : 1rem;
+}
+.div-info2{
+    display : grid;
+    grid-template-columns : 1fr 1fr 1fr;
+    grid-gap : 1rem;
+}
+.div-info3{
+    display : grid;
+    grid-template-columns : 4fr 1fr;
+    grid-gap : 1rem;
+}
+.textalignRight{
+    text-align: right;
+}
+.textalignCenter{
+    text-align: center;
 }
