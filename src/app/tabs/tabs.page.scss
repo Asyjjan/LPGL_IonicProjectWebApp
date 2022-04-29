@@ -1,7 +1,66 @@
+.header {
+    background-color: green;
+    height: 150px;
+    padding-top: 2px;
+}
 
+<<<<<<< HEAD
 ion-tab-bar{
     --background:green;
     --color:white;
     --color-selected:black;
     --background-focused:rgb(62, 145, 62);
 }
+=======
+.header h2 {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.img-profil {
+    border-radius: 50%;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.name h3 {
+    color: white;
+    margin: 8px 0px 0px 0px;
+}
+
+.space {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px 0px 50px;
+}
+
+.img_box {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.border-white {
+    border: 4px solid white;
+    border-radius: 50%;
+    width: fit-content;
+}
+
+.border-white {
+    border: 4px solid green;
+    border-radius: 50%;
+    width: fit-content;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    margin-top: -60px;
+}
+>>>>>>> 290fb4a0caa5b66f38f9d181a34ba6c7deb31535
