@@ -3,6 +3,7 @@ import { Validators, FormBuilder, FormGroup, FormControl } from '@angular/forms'
 import {create , findAll} from '../../services/userServices'
 import { ToastController } from '@ionic/angular';
 import { Router} from '@angular/router';
+import { AuthGuardService } from '../services/auth-guard.service';
 
 @Component({
   selector: 'app-register-page',
@@ -13,7 +14,7 @@ export class RegisterPagePage implements OnInit {
   
   registerForm;
 
-  constructor(private formBuilder:FormBuilder,public toastController: ToastController, private router: Router) {
+  constructor(private formBuilder:FormBuilder,public toastController: ToastController, private router: Router, private authGuardService:AuthGuardService) {
     this.registerForm = this.formBuilder.group({
       pseudo : ["",[Validators.required]], 
       mdp: ["",[Validators.required]],
@@ -34,9 +35,16 @@ export class RegisterPagePage implements OnInit {
   async success(){
     const toast = await this.toastController.create({
       message: 'Inscription réalisée avec succès',
-      duration: 3000
+      duration: 3000,
+      position:"top"
+
     });
     toast.present();
+  }
+
+  ionViewWillEnter(){
+    if(this.authGuardService.getAuthenticated())
+      this.router.navigate(['/']);
   }
   ngOnInit() {
   }

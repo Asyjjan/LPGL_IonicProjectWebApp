@@ -25,7 +25,6 @@ export class LoginPagePage implements OnInit {
   submit() {
     const { pseudo, mdp } = this.registerForm.value;
     const user = connect({pseudo, mdp})
-    console.log(user)
     if (user) {
       this.success();
       this.userDataService.setUser(new Utilisateur(user))
@@ -45,7 +44,8 @@ export class LoginPagePage implements OnInit {
   async success() {
     const toast = await this.toastController.create({
       message: 'Connecté',
-      duration: 3000
+      duration: 3000,
+      position:"top"
     });
     toast.present();
   }
