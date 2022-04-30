@@ -3,3 +3,10 @@
     justify-content: flex-end;
     padding: 10px 10px 0px 10px;
 }
+ion-toolbar{
+    --background: green;
+    --color:white;
+}
+ion-content{
+    --background:rgb(234, 248, 234);
+}
