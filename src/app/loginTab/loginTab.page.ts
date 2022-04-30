@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators,FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { connect } from '../../services/authServices'
 
@@ -9,11 +9,11 @@ import { Utilisateur } from '../services/user';
 import { UserDataService } from '../services/user-data.service';
 
 @Component({
-  selector: 'app-loginTab',
+  selector: 'app-loginTab-page',
   templateUrl: 'loginTab.page.html',
   styleUrls: ['loginTab.page.scss']
 })
-export class LoginTabPage {
+export class LoginTabPage implements OnInit  {
 
   registerForm;
 
