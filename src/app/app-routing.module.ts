@@ -14,7 +14,11 @@ const routes: Routes = [
   {
     path: 'detail-animal',
     loadChildren: () => import('./detail-animal/detail-animal.module').then( m => m.DetailAnimalPageModule)
+  },  {
+    path: 'edit-profil',
+    loadChildren: () => import('./edit-profil/edit-profil.module').then( m => m.EditProfilPageModule)
   }
+
 ];
 @NgModule({
   imports: [
