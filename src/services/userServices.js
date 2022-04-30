@@ -1,16 +1,4 @@
-const users = [
-    {
-	utilisateurId: 1,
-	pseudo : "admin", 
-	mdp: "admin",
-	email:"admin@gmail.com",
-	telephone : "0640404040",
-	nom :"admin",
-	prenom : "admin",
-    addresse:"",
-    }
-]
-
+import users from '../assets/data/users.json'
 export const findAll = ()=>{
     return users;
 
@@ -35,4 +23,8 @@ export const findByUsername = (username)=>{
    return result;
 }
 
-
+export const findById = (userId)=>{ 
+    const result =  users.filter(u => u.utilisateurId === userId)[0];
+    return result;
+ }
+ 

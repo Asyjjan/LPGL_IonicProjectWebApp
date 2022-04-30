@@ -30,7 +30,6 @@ export class LoginTabPage implements OnInit  {
     if (user) {
       this.success();
       this.userDataService.setUser(new Utilisateur(user))
-      this.authGuardService.setAuthenticated(true)
       this.router.navigate(['/'])
     }
     else this.failed();

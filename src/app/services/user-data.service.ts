@@ -5,12 +5,11 @@ import { Utilisateur } from './user';
   providedIn: 'root'
 })
 export class UserDataService {
-  private user:Utilisateur;
   getUser(){
-    return this.user;
+    return JSON.parse(localStorage.getItem("user"));
   }
   setUser(user:Utilisateur){
-    this.user=user;
+    localStorage.setItem("user",JSON.stringify(user));
   }
   constructor() { }
 

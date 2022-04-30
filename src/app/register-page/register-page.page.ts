@@ -29,7 +29,7 @@ export class RegisterPagePage implements OnInit {
     const user = {...this.registerForm.value}
     const response = create(user);
     this.success();
-    this.router.navigate(["/login"]);
+    this.router.navigate(["/tabs/login"]);
     
   }
   async success(){
