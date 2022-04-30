@@ -1,0 +1,13 @@
+.annonces-list .annonces-item{
+    height: 100%; display: flex; align-items: center; justify-content: center; width: 80%;
+    margin: auto;
+}
+.annonces-list .annonces-card{
+    position:relative;
+    cursor: pointer;
+}
+.cardfooter {
+    position: absolute;
+    bottom:0;
+    right:0
+}

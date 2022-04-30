@@ -1,6 +1,6 @@
 import {findByUsername} from './userServices'
 
-export const connect = (infos)=>{
+export function connect (infos){
     const {pseudo , mdp} = infos;
     const user = findByUsername(pseudo)
     if(!user)return null

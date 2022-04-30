@@ -3,9 +3,9 @@
         "annonceId":1 ,
         "auteurId" :1 , 
         "animalId" :1 ,
-        "titre" :"",
-        "datePublication" : "",
-        "prix":""
+        "titre" :"Titre",
+        "datePublication" : "2022/04/30",
+        "prix":500
 
     }
 ]
