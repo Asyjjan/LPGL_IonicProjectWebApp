@@ -2,17 +2,17 @@
   <ion-header [translucent]="true">
     <ion-toolbar>
       <ion-title>
-        Recherche
+        Profil
       </ion-title>
     </ion-toolbar>
   </ion-header>
 
 
 
-  <h2>Profil</h2>
+  <h2>Consultant</h2>
   <div class="space">
     <div class="name">
-      <h3>Nom & prénom</h3>
+      <h3>{{user.pseudo}}</h3>
     </div>
     <div class="flex">
       <img class="img-profil" src="../../assets/mignon.jpg" alt="user">
@@ -21,19 +21,19 @@
 </div>
 
 <ion-chip>
-  <ion-label>Nom & prenom</ion-label>
+  <ion-label>Identité : {{user.name}}  {{user.prenom}}</ion-label>
 </ion-chip>
 
 <ion-chip color="secondary">
-  <ion-label color="dark">Adresse email</ion-label>
+  <ion-label color="dark">Adresse email : {{user.email}}</ion-label>
 </ion-chip>
 
 <ion-chip color="secondary">
-  <ion-label color="dark">Téléphone</ion-label>
+  <ion-label color="dark">Téléphone : {{user.telephone}} </ion-label>
 </ion-chip>
 
 <ion-chip color="secondary">
-  <ion-label color="dark">adresse/secteur</ion-label>
+  <ion-label color="dark">adresse : {{user.addresse}}</ion-label>
 </ion-chip>
 
 <ion-chip color="secondary">
