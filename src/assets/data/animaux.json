@@ -15,5 +15,39 @@
         "lieu": "Reims",
         "SOS": false,
         "photo": "bergerAllemand.jpg"
+    },
+    {
+        "animalId": 2,
+        "nom":"Oscar",
+        "race":"Welsh Gorgi",
+        "genre":"Mâle",
+        "poids": 15,
+        "age":7,
+        "description":"Welsh Corgi au peulage feu et aux yeux vert",
+        "espece":"Chien",
+        "taille":"50cm",
+        "dateDeNaissance":"16/08/2015",
+        "caractere":"Câlin et protecteur",
+        "carnetDeSante":"Léger surpoids",
+        "lieu":"Metz",
+        "SOS":false,
+        "photo":"WelshCorgi.jpg"
+    },
+    {
+        "animalId":3,
+        "nom":"Kitou",
+        "race":"Européen",
+        "genre":"Mâle",
+        "poids":15,
+        "age":4,
+        "description":"Chat au beau pelage noir et au yeux vert",
+        "espece":"Chat",
+        "taille":60,
+        "dateDeNaissance":"31/05/2018",
+        "caractere":"Très calin",
+        "carnetDeSante":"aucun",
+        "lieu":"Chaumont",
+        "SOS":false,
+        "photo":"chatNoir.jpg"
     }
 ]
