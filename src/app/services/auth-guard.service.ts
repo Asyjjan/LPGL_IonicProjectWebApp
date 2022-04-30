@@ -5,17 +5,14 @@ import { Router, CanActivate, ActivatedRouteSnapshot } from '@angular/router';
   providedIn: 'root'
 })
 export class AuthGuardService implements CanActivate{
-  private authenticated= false;
   getAuthenticated(){
-    return this.authenticated;
-  }
-  setAuthenticated(bool){
-    this.authenticated=bool;
+    if(localStorage.getItem("user"))
+      return true
   }
   constructor(private router:Router) { }
   canActivate(route : ActivatedRouteSnapshot) : boolean{
     if(!this.getAuthenticated()){
-      this.router.navigate(['login']);
+      this.router.navigate(['/']);
       return false;
     }
     return true;

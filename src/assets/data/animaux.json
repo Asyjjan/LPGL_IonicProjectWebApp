@@ -1,0 +1,19 @@
+[
+    {
+        "animalId": 1,
+        "nom": "Ruby",
+        "race": "Berger Allemand",
+        "genre": "Mâle",
+        "poids": 35,
+        "age": 5,
+        "description": "Beaux bergers allemand de 5 ans très joueur en recherche d'une famille pleine d'amour",
+        "espece": "Chien",
+        "taille": "1m10",
+        "dateDeNaissance": "12/03/2017",
+        "caractere": "Gentil",
+        "carnetDeSante": "aucun",
+        "lieu": "Reims",
+        "SOS": false,
+        "photo": "bergerAllemand.jpg"
+    }
+]
