@@ -1,20 +1,20 @@
 import animaux from '../assets/data/animaux.json'
-export const findAll = () => {
+export function findAll (){
     return animaux;
 
 }
-export const create = (animal) => {
+export function create (animal)  {
     animaux.push(animal)
 }
-export const destroy = (animalId) => {
+export function destroy (animalId)  {
 
 }
 
-export const update = (animal) => {
+export function update (animal) {
 
 }
 
-export const findById = (animalId) => {
+export function findById(animalId) {
     const result = animaux.filter(a => a.animalId === animalId)[0];
     return result;
 }

@@ -1,20 +1,20 @@
 import annonces from '../assets/data/annonces.json'
-export const findAll = () => {
+export function findAll() {
     return annonces;
 
 }
-export const create = (annonce) => {
+export function create(annonce) {
     annonces.push(annonce)
 }
-export const destroy = (annonceId) => {
+export function destroy(annonceId) {
 
 }
 
-export const update = (annonce) => {
+export function update(annonce) {
 
 }
 
-export const findById = (annonceId) => {
+export function findById(annonceId) {
     const result = annonces.filter(a => a.annonceId === annonceId)[0];
     return result;
 }

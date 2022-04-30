@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { Animal } from '../services/animal';
 
 @Component({
   selector: 'app-detail-animal',
@@ -6,10 +9,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./detail-animal.page.scss'],
 })
 export class DetailAnimalPage implements OnInit {
+  animal :Animal;
 
-  constructor() { }
+  constructor(public router: Router) { 
+    console.log(router.getCurrentNavigation().extras.state)
+  }
 
   ngOnInit() {
+
   }
 
 }
