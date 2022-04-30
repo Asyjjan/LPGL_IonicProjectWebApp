@@ -1,33 +1,37 @@
-.hasnt-account-div a{
-    color :#6c757d !important;
-    font-size:12px !important
+.hasnt-account-div a {
+    color: #6c757d !important;
+    font-size: 12px !important
 }
 
-ion-toolbar{
+ion-toolbar {
     --background: green;
-    --color:white;
-}
-ion-content{
-    --background:rgb(234, 248, 234);
+    --color: white;
 }
 
-ion-item{
-    --background:rgb(147, 238, 147);
+ion-content {
+    --background: rgb(234, 248, 234);
 }
 
-ion-button{
-    --background:green;
-} 
+ion-item {
+    --background: rgb(147, 238, 147);
+}
 
-.margin_form{
+ion-button {
+    --background: green;
+}
+
+.margin_form {
     margin-top: 10%;
 }
 
-.margin_btn{
+.margin_btn {
     margin-top: 5%;
 }
 
-
-
-
-
+.arrondi {
+    --border-color: var(--ion-color-medium-shade);
+    --border-radius: 25px;
+    --border-width: 1px;
+    --box-shadow: 2px gray;
+    --background: snow;
+}
