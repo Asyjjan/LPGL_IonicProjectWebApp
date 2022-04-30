@@ -30,6 +30,10 @@ const routes: Routes = [
         canActivate:[AuthGuardService]
       },
       {
+        path: 'login',
+        loadChildren: () => import('../loginTab/loginTab.module').then(m => m.LoginTabPageModule),
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'

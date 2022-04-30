@@ -1,17 +1,19 @@
-import { Component, OnInit } from '@angular/core';
-import { Validators, FormBuilder } from '@angular/forms';
-import { connect } from '../../services/authServices'
-import { ToastController } from '@ionic/angular';
+import { Component } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { connect } from '../../services/authServices'
+
+import { ToastController } from '@ionic/angular';
 import { AuthGuardService } from '../services/auth-guard.service';
-import { UserDataService } from '../services/user-data.service';
 import { Utilisateur } from '../services/user';
+import { UserDataService } from '../services/user-data.service';
+
 @Component({
-  selector: 'app-login-page',
-  templateUrl: './login-page.page.html',
-  styleUrls: ['./login-page.page.scss'],
+  selector: 'app-loginTab',
+  templateUrl: 'loginTab.page.html',
+  styleUrls: ['loginTab.page.scss']
 })
-export class LoginPagePage implements OnInit {
+export class LoginTabPage {
 
   registerForm;
 
@@ -56,5 +58,6 @@ export class LoginPagePage implements OnInit {
   }
   ngOnInit() {
   }
+
 
 }
