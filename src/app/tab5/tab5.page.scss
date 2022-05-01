@@ -1,40 +1,50 @@
 .header {
-    background-color: green;
-    height: 200px;
-    padding-top: 0px;
+  background-color: green;
+  height: 200px;
+  padding-top: 0px;
+  position: relative;
 }
 
 .header h2 {
-    color: white;
-    font-weight: bold;
-    text-align: center;
+  color: white;
+  font-weight: bold;
+  text-align: center;
 }
 
 .img-profil {
-    border-radius: 50%;
-    width: 100px;
-    margin-top: 15px;
+  border-radius: 50%;
+  width: 100px;
+  margin-top: 15px;
 }
 
 .name {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .name h3 {
-    color: white;
-    margin: 8px 0px 0px 0px;
+  color: white;
+  margin: 8px 0px 0px 0px;
 }
 
 .space {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 10px 0px 50px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px 0px 50px;
 }
 
 .flex {
-    display: flex;
-    justify-content: center;
-    margin-top: -60px;
+  display: flex;
+  justify-content: center;
+  margin-top: -60px;
+}
+
+.disconnect-btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+  font-size: 32px;
+  color: white;
 }

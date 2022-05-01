@@ -11,6 +11,10 @@ export class UserDataService {
   setUser(user:Utilisateur){
     localStorage.setItem("user",JSON.stringify(user));
   }
+
+  logout(){
+    localStorage.removeItem("user")
+  }
   constructor() { }
 
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Utilisateur } from '../services/user';
 import { UserDataService } from '../services/user-data.service';
 
@@ -9,9 +10,14 @@ import { UserDataService } from '../services/user-data.service';
 })
 export class Tab5Page {
   public user: Utilisateur;
-  constructor(public userDataService: UserDataService) {
+  constructor(public userDataService: UserDataService , public router : Router) {
     this.user = this.userDataService.getUser();
   }
 
+
+  logout(){
+    this.userDataService.logout();
+    this.router.navigate(['/'])
+  }
 
 }

@@ -7,5 +7,14 @@
         "datePublication" : "2022/04/30",
         "prix":500
 
+    },
+    {
+        "annonceId":1 ,
+        "auteurId" :1 , 
+        "animalId" :2 ,
+        "titre" :"Titre",
+        "datePublication" : "2022/04/30",
+        "prix":500
+
     }
 ]

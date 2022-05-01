@@ -10,27 +10,27 @@
 <ion-content>
   <div class="margin">
     <div class="center">
-      <img src="..\assets\img\bergerAllemand.jpg" class="center" />
+              <img src='{{"../../assets/img/"+animal["photo"]}}' class="center">
     </div>
     <div class="textPolice">
-      <div class="div-nomAnimal">Ruby</div>
+      <div class="div-nomAnimal">{{animal['nom']}}</div>
       <div class="div-info1">
-        <div>Espèce: Chien</div>
-        <div class="textalignRight">Race: Berger Allemand</div>
+        <div>Espèce: {{animal['espece']}}</div>
+        <div class="textalignRight">Race: {{animal['race']}}</div>
       </div>
       <div class="div-info2">
-        <div>Genre: M</div>
-        <div class="textalignCenter">Poids: 35kg</div>
-        <div class="textalignRight">Taille: 1m10</div>
+        <div>Genre: {{animal['genre']}}</div>
+        <div class="textalignCenter">Poids: {{animal['poids']}}kg</div>
+        <div class="textalignRight">Taille: {{animal['taille']}}</div>
       </div>
       <div class="div-info3">
-        <div>Date de naissance: 12/03/2017</div>
-        <div class="textalignRight">Age: 5 ans</div>
+        <div>Date de naissance: {{animal['dateDeNaissance']}}</div>
+        <div class="textalignRight">Age: {{animal['age']}}</div>
       </div>
-      <div>Caractère: c'est un gentil chien</div>
-      <div>Description: Beaux berger allemand de 5 ans trés joueur en recherche d'une famille plein d'amour.</div>
-      <div>Information de santé: aucune</div>
-      <div>Localisation actuelle: Reims</div>
+      <div>Caractère: {{animal['caractere']}}</div>
+      <div>Description: {{animal['description']}}</div>
+      <div>Information de santé: {{animal['carnetDeSante']}}</div>
+      <div>Localisation actuelle: {{animal['lieu']}}</div>
     </div>
   </div>
 </ion-content>

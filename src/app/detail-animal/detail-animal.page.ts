@@ -12,7 +12,7 @@ export class DetailAnimalPage implements OnInit {
   animal :Animal;
 
   constructor(public router: Router) { 
-    console.log(router.getCurrentNavigation().extras.state)
+    this.animal = router.getCurrentNavigation().extras.state.animal as Animal
   }
 
   ngOnInit() {
