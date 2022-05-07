@@ -26,3 +26,36 @@
 .filters .filter {
     width: 25%
 }
+
+.annonces-list .annonce-card {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+}
+
+.annonces-list img {
+    width: 300px;
+}
+
+.cardfooter {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.filters .filter {
+    width: 25%
+}
+
+ion-list {
+    background-color: rgb(234, 248, 234);
+}
+
+ion-item {
+    --background: rgb(234, 248, 234);
+}
+
+ion-toolbar {
+    --background: green;
+    --color: white;
+}
