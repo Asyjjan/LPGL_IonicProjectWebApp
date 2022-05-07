@@ -1,56 +1,67 @@
-ion-toolbar{
-    --background: green;
-    --color:white;
+ion-toolbar {
+ --background: green;
+ --color: white;
 }
-ion-content{
-    --background: rgb(39, 90, 39);
+
+ion-content {
+ --background: rgb(39, 90, 39);
 }
-.margin{
-    margin-left: 2%;
-    margin-right: 2%;
-    margin-top: 2%;
-    margin-bottom: 2%;
+
+.margin {
+ margin-left: 2%;
+ margin-right: 2%;
+ margin-top: 2%;
+ margin-bottom: 2%;
 }
-.center{
-    display: flex;
-    justify-content: center;
-    height: 40%;
-    padding: 10px;
+
+.center {
+ display: flex;
+ justify-content: center;
+ height: 40%;
+ padding: 10px;
 }
-.textPolice{
-    margin-top: 5px;
-    padding: 10px;
-    line-height: 1.5;
-    --color:black;
-    --background:rgb(234, 248, 234);
+
+.textPolice {
+ margin-top: 5px;
+ padding: 10px;
+ line-height: 1.5;
+ --color: black;
+ --background: rgb(234, 248, 234);
 }
-.div-nomAnimal{
-    font-weight: 900;
-    font-size:30px;
-    text-align: center;
-    margin-bottom: 10px;
+
+.div-nomAnimal {
+ font-weight: 900;
+ font-size: 30px;
+ text-align: center;
+ margin-bottom: 10px;
 }
-.div-info1{
-    display : grid;
-    grid-template-columns : 1fr 1fr;
-    grid-gap : 1rem;
+
+.div-info1 {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ grid-gap: 1rem;
 }
-.div-info2{
-    display : grid;
-    grid-template-columns : 1fr 1fr 1fr;
-    grid-gap : 1rem;
+
+.div-info2 {
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+ grid-gap: 1rem;
 }
-.div-info3{
-    display : grid;
-    grid-template-columns : 4fr 1fr;
-    grid-gap : 1rem;
+
+.div-info3 {
+ display: grid;
+ grid-template-columns: 4fr 1fr;
+ grid-gap: 1rem;
 }
-.textalignRight{
-    text-align: right;
+
+.textalignRight {
+ text-align: right;
 }
-.textalignCenter{
-    text-align: center;
+
+.textalignCenter {
+ text-align: center;
 }
-.margDes{
-    margin-top: 20px;
+
+.margDes {
+ margin-top: 20px;
 }

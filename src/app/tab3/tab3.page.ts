@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Annonce } from '../services/annonce';
+import {findAll} from '../../services/annoncesServices.js'
+import {findById as findUserById} from '../../services/userServices.js'
+import {findById as findAnimalById} from '../../services/animauxServices.js'
 
 @Component({
   selector: 'app-tab3',
@@ -7,9 +11,22 @@ import { Router } from '@angular/router';
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page {
+  
   pet: string = "chiens";
-  constructor(private router: Router) { }
+  public annonces : [];
+
+  constructor(public router : Router) { 
+      this.annonces = findAll().map(a=>{
+      const annonce = new Annonce(a)
+      annonce.animal = findAnimalById(a.animalId)
+      annonce.auteur = findUserById(a.auteurId)
+      console.log(annonce)
+      return annonce
+    });
+  }
+
   voirDetail() {
     this.router.navigate(['detail-animal']);
   }
+
 }
