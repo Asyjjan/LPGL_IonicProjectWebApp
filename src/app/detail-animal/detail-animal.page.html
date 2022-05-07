@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <ion-header [translucent]="true">
     <ion-toolbar>
         <ion-buttons slot="start">
@@ -33,4 +34,41 @@
             <div>Localisation actuelle: {{animal['lieu']}}</div>
         </div>
     </div>
+=======
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Détails</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="margin">
+    <div class="center">
+              <img src='{{"../../assets/img/"+animal["photo"]}}' class="center">
+    </div>
+    <ion-card class="textPolice">
+      <div class="div-nomAnimal">{{animal['nom']}}</div>
+      <div class="div-info1">
+        <div><strong>Espèce</strong>: {{animal['espece']}}</div>
+        <div class="textalignRight"><strong>Race</strong>: {{animal['race']}}</div>
+      </div>
+      <div class="div-info2">
+        <div><strong>Genre</strong>: {{animal['genre']}}</div>
+        <div class="textalignCenter"><strong>Poids</strong>: {{animal['poids']}}kg</div>
+        <div class="textalignRight"><strong>Taille</strong>: {{animal['taille']}}</div>
+      </div>
+      <div class="div-info3">
+        <div><strong>Date de naissance</strong>: {{animal['dateDeNaissance']}}</div>
+        <div class="textalignRight"><strong>Age</strong>: {{animal['age']}}</div>
+      </div>
+      <div><strong>Caractère</strong>: {{animal['caractere']}}</div>
+      <div><strong>Information de santé</strong>: {{animal['carnetDeSante']}}</div>
+      <div><strong>Localisation actuelle</strong>: {{animal['lieu']}}</div>
+      <div class="margDes"><div><strong>Description</strong>:</div> {{animal['description']}}</div>
+    </ion-card>
+  </div>
+>>>>>>> ae451b8964a613b2b6e679569595bdbbf4d0dd9c
 </ion-content>

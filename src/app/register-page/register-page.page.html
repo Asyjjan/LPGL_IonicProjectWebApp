@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <ion-header>
   <ion-toolbar>
     <ion-title class="ion-text-center">Inscription</ion-title>
@@ -36,3 +37,43 @@
     <div class="has-account-div"><a href="./tabs/login">Déjà un compte ?</a></div>
   </form>
 </ion-content>
+=======
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center">Inscription</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="registerForm" (ngSubmit)="submit()" novalidate class="ion-text-center margin_form">
+    
+    <ion-item class="arrondi">
+      <ion-input type="text" formControlName="nom" placeholder="Nom..."></ion-input>
+    </ion-item>
+    <br>
+    <ion-item class="arrondi">
+      <ion-input type="text" formControlName="prenom" placeholder="Prénom..."></ion-input>
+    </ion-item>
+    <br>
+    <ion-item class="arrondi">
+      <ion-input type="text" formControlName="email" placeholder="Adresse mail..."></ion-input>
+    </ion-item>
+    <br>
+    <ion-item class="arrondi">
+      <ion-input type="text" formControlName="pseudo" placeholder="Nom d'utilisateur..."></ion-input>
+    </ion-item>
+    <br>
+    <ion-item class="arrondi">
+      <ion-input type="text" formControlName="mdp" placeholder="Mot de passe..."></ion-input>
+    </ion-item>
+    <br>
+    <ion-item class="arrondi">
+      <ion-input type="text" formControlName="telephone" placeholder="N° de téléphone..."></ion-input>
+    </ion-item>
+
+    
+    <ion-button type="submit" [disabled]="!registerForm.valid">Valider</ion-button>
+    <div class="has-account-div"><a href="./tabs/login">Déjà un compte ?</a></div>
+  </form>
+</ion-content>
+>>>>>>> ae451b8964a613b2b6e679569595bdbbf4d0dd9c

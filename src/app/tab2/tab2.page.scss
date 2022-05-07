@@ -1,4 +1,5 @@
 .annonces-list .annonces-item {
+<<<<<<< HEAD
     height: 100%;
     display: flex;
     align-items: center;
@@ -25,4 +26,32 @@
 
 .likeButton {
     background-color: white;
+=======
+ height: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ width: 80%;
+ margin: auto;
+}
+
+.annonces-list .annonce-card {
+ position: relative;
+ cursor: pointer;
+ width: 100%;
+}
+
+.annonces-list img {
+ width: 300px;
+}
+
+.cardfooter {
+ position: absolute;
+ bottom: 0;
+ right: 0;
+}
+
+.filters .filter {
+ width: 25%
+>>>>>>> ae451b8964a613b2b6e679569595bdbbf4d0dd9c
 }

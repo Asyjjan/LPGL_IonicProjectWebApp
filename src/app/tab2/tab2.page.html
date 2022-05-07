@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <ion-header [translucent]="true">
     <ion-toolbar>
         <ion-title>
@@ -40,4 +41,80 @@
         </ion-item>
     </ion-list>
 
+=======
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-title>
+            Recherche
+        </ion-title>
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-toolbar class="ion-otherToolbar">
+        <ion-searchbar placeholder="Rechercher..." class="ion-searchbar" [(ngModel)]="searchQuery"></ion-searchbar>
+        <ion-row class="filters">
+            <ion-col class="filter">
+                <ion-label>Espèce</ion-label>
+                <ion-select className="espece_select" (ionChange)="onFilterChange('espece' ,$event)" value="">
+                    <ion-select-option value=""></ion-select-option>
+                    <ion-select-option *ngFor="let espece of getEspeces()" [value]="espece">
+                        {{espece}}
+                    </ion-select-option>
+                </ion-select>
+            </ion-col>
+            <ion-col class="filter">
+                <ion-label>Genre</ion-label>
+                <ion-select className="espece_select" (ionChange)="onFilterChange('genre' ,$event)" value="">
+                    <ion-select-option value=""></ion-select-option>
+                    <ion-select-option *ngFor="let genre of getGenre()" [value]="genre">
+                        {{genre}}
+                    </ion-select-option>
+                </ion-select>
+            </ion-col>
+            <ion-col class="filter">
+                <ion-label>Lieu</ion-label>
+                <ion-select className="espece_select" (ionChange)="onFilterChange('lieu' ,$event)" value="">
+                    <ion-select-option value=""></ion-select-option>
+                    <ion-select-option *ngFor="let lieu of getLieux()" [value]="lieu">
+                        {{lieu}}
+                    </ion-select-option>
+                </ion-select>
+            </ion-col>
+
+        </ion-row>
+    </ion-toolbar>
+    <ion-list class="annonces-list">
+        <ion-item *ngFor="let annonce of getFilteredData()" class="annonces-item" (click)="goToDetail(annonce['animal'])">
+            <ion-card class="annonce-card">
+                <ion-grid>
+                    <ion-row>
+                        <ion-col>
+                            <img src='{{"../../assets/img/"+annonce["animal"]["photo"]}}'>
+                        </ion-col>
+                        <ion-col>
+                            <ion-card-title>
+                                {{annonce["titre"]}}
+                            </ion-card-title>
+                            <ion-card-subtitle>
+                                {{annonce["datePublication"]}}
+                            </ion-card-subtitle>
+                            <ion-card-content>
+                                <div>{{annonce["animal"]["race"]}} - {{annonce["animal"]["genre"]}}</div>
+
+                            </ion-card-content>
+                            <ion-row class="cardfooter">
+                                <span class="annonce-lieu">{{annonce["animal"]["lieu"]}}</span>
+
+                            </ion-row>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-card>
+
+        </ion-item>
+    </ion-list>
+
+>>>>>>> ae451b8964a613b2b6e679569595bdbbf4d0dd9c
 </ion-content>
