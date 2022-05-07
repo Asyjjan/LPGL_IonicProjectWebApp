@@ -13,16 +13,21 @@ import {findById as findAnimalById} from '../../services/animauxServices.js'
 export class Tab3Page {
   
   pet: string = "chiens";
-  public annonces : [];
+  public annonces : Annonce[];
+  public likedAnnonces : Annonce[] = [];
 
-  constructor(public router : Router) { 
+  constructor(public router : Router) {
       this.annonces = findAll().map(a=>{
-      const annonce = new Annonce(a)
-      annonce.animal = findAnimalById(a.animalId)
-      annonce.auteur = findUserById(a.auteurId)
-      console.log(annonce)
-      return annonce
-    });
+        const annonce = new Annonce(a)
+        annonce.animal = findAnimalById(a.animalId)
+        annonce.auteur = findUserById(a.auteurId)
+
+        if(annonce.liked){
+          this.likedAnnonces.push(annonce)
+        }
+
+        return annonce
+      });
   }
 
   voirDetail() {

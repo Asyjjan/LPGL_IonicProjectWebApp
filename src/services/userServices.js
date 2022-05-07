@@ -1,4 +1,5 @@
-import users from '../assets/data/users.json'
+const users = [];
+
 export function findAll() {
     return users;
 
@@ -27,4 +28,3 @@ export function findById(userId) {
     const result = users.filter(u => u.utilisateurId === userId)[0];
     return result;
 }
-

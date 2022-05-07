@@ -1,62 +1,12 @@
-<<<<<<< HEAD
+import { BddService } from './../../services/BddService';
 import { Component } from '@angular/core';
-import {findAll, update} from '../../services/annoncesServices.js'
-import {findById as findUserById} from '../../services/userServices.js'
-import {findById as findAnimalById} from '../../services/animauxServices.js'
-import { Annonce } from '../services/annonce';
-import { Router } from '@angular/router';
-
-@Component({
-  selector: 'app-tab2',
-  templateUrl: 'tab2.page.html',
-  styleUrls: ['tab2.page.scss']
-})
-export class Tab2Page {
-
-  public annonces : [];
-
-  constructor(public router : Router) { 
-    this.annonces= findAll().map(a=>{
-    const annonce = new Annonce(a)
-    annonce.animal = findAnimalById(a.animalId)
-    annonce.auteur = findUserById(a.auteurId)
-    return annonce
-    });
-  }
-
-  goToDetail(animal){
-    this.router.navigate(['/detail-animal'], {state : { animal}});
-  }
-
-  clickOnLikeButton(annonce){
-    console.log("J'ai cliquer sur le bouton like")
-    console.log(annonce)
-    if(annonce["liked"]){
-      annonce["liked"] = false;
-      this.removeFromFavoris(annonce);
-    }else{
-      annonce["liked"] = true;
-      update(annonce)
-      this.addToFavoris(annonce);
-    }
-  }
-
-  addToFavoris(annonce){
-    
-  }
-
-  removeFromFavoris(annonce){
-
-  }
-}
-=======
-import { Component } from '@angular/core';
-import { findAll } from '../../services/annoncesServices.js'
+import { findAll, update } from '../../services/annoncesServices.js'
 import { findById as findUserById } from '../../services/userServices.js'
 import { findById as findAnimalById, findAllPath } from '../../services/animauxServices.js'
 import _ from 'lodash'
 import { Annonce } from '../services/annonce';
 import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
@@ -66,9 +16,10 @@ export class Tab2Page {
   public annonces: [];
   private filters = {};
   public searchQuery = "";
-  constructor(public router: Router) {
-    this.annonces = findAll().map(a => {
 
+  constructor(public router: Router) {
+    const bdd = new BddService()
+    this.annonces = bdd.getAllAnnonces().map(a => {
       const annonce = new Annonce(a)
       annonce.animal = findAnimalById(a.animalId)
       annonce.auteur = findUserById(a.auteurId)
@@ -96,6 +47,7 @@ export class Tab2Page {
   getEspeces(): [] {
     return findAllPath("espece");
   }
+
   getGenre(): [] {
     return findAllPath("genre");
   }
@@ -103,10 +55,31 @@ export class Tab2Page {
   getLieux(): [] {
     return findAllPath("lieu")
   }
+
   onFilterChange(pathFilter, event) {
     const { value } = event.target
     if (value === "") { delete this.filters[pathFilter]; return }
     this.filters[pathFilter] = value;
   }
+
+  clickOnLikeButton(annonce){
+    console.log("J'ai cliquer sur le bouton like")
+    console.log(annonce)
+    if(annonce["liked"]){
+      annonce["liked"] = false;
+      this.removeFromFavoris(annonce);
+    }else{
+      annonce["liked"] = true;
+      update(annonce)
+      this.addToFavoris(annonce);
+    }
+  }
+
+  addToFavoris(annonce){
+    
+  }
+
+  removeFromFavoris(annonce){
+
+  }
 }
->>>>>>> ae451b8964a613b2b6e679569595bdbbf4d0dd9c

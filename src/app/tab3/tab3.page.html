@@ -23,7 +23,7 @@
 <ion-content>
     <div [ngSwitch]="pet">
         <ion-list *ngSwitchCase="'chiens'">
-            <ion-item *ngFor="let annonce of annonces">
+            <ion-item *ngFor="let annonce of likedAnnonces">
                 <ion-thumbnail item-start>
                     <img src='{{"../../assets/img/"+annonce["animal"]["photo"]}}'>
                 </ion-thumbnail>

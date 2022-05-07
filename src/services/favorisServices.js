@@ -1,5 +1,4 @@
-import annonces from '../assets/data/annonces.json'
-import { Annonce } from '../services/annonce';
+const annonces = [];
 
 export function findAll() {
     let res;

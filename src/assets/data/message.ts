@@ -1,4 +1,4 @@
-[
+export const messages = [
     {
         "MessageId":1 ,
         "auteurId" :1 , 

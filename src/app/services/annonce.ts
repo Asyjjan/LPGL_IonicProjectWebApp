@@ -11,13 +11,14 @@ export class Annonce {
     private _datePublication: string
     private _liked: boolean
 
-    constructor({annonceId, auteur, animal, titre,datePublication,prix}) {
+    constructor({annonceId, auteur, animal, titre, datePublication, prix, liked}) {
         this._annonceId = annonceId;
         this._auteur = auteur;
         this._animal = animal;
         this._titre = titre;
         this._datePublication = datePublication;
         this._prix = prix;
+        this._liked = liked;
     }
 
     public get auteur(): Utilisateur {
