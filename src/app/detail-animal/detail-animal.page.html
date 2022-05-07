@@ -1,36 +1,36 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title>Détails</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Détails</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="margin">
-    <div class="center">
-              <img src='{{"../../assets/img/"+animal["photo"]}}' class="center">
+    <div class="margin">
+        <div class="center">
+            <img src='{{"../../assets/img/"+animal["photo"]}}' class="center">
+        </div>
+        <div class="textPolice">
+            <div class="div-nomAnimal">{{animal['nom']}}</div>
+            <div class="div-info1">
+                <div>Espèce: {{animal['espece']}}</div>
+                <div class="textalignRight">Race: {{animal['race']}}</div>
+            </div>
+            <div class="div-info2">
+                <div>Genre: {{animal['genre']}}</div>
+                <div class="textalignCenter">Poids: {{animal['poids']}}kg</div>
+                <div class="textalignRight">Taille: {{animal['taille']}}</div>
+            </div>
+            <div class="div-info3">
+                <div>Date de naissance: {{animal['dateDeNaissance']}}</div>
+                <div class="textalignRight">Age: {{animal['age']}}</div>
+            </div>
+            <div>Caractère: {{animal['caractere']}}</div>
+            <div>Description: {{animal['description']}}</div>
+            <div>Information de santé: {{animal['carnetDeSante']}}</div>
+            <div>Localisation actuelle: {{animal['lieu']}}</div>
+        </div>
     </div>
-    <div class="textPolice">
-      <div class="div-nomAnimal">{{animal['nom']}}</div>
-      <div class="div-info1">
-        <div>Espèce: {{animal['espece']}}</div>
-        <div class="textalignRight">Race: {{animal['race']}}</div>
-      </div>
-      <div class="div-info2">
-        <div>Genre: {{animal['genre']}}</div>
-        <div class="textalignCenter">Poids: {{animal['poids']}}kg</div>
-        <div class="textalignRight">Taille: {{animal['taille']}}</div>
-      </div>
-      <div class="div-info3">
-        <div>Date de naissance: {{animal['dateDeNaissance']}}</div>
-        <div class="textalignRight">Age: {{animal['age']}}</div>
-      </div>
-      <div>Caractère: {{animal['caractere']}}</div>
-      <div>Description: {{animal['description']}}</div>
-      <div>Information de santé: {{animal['carnetDeSante']}}</div>
-      <div>Localisation actuelle: {{animal['lieu']}}</div>
-    </div>
-  </div>
 </ion-content>

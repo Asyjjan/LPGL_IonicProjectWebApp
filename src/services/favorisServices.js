@@ -1,7 +1,15 @@
 import annonces from '../assets/data/annonces.json'
+import { Annonce } from '../services/annonce';
 
 export function findAll() {
-    return annonces;
+    let res;
+    annonces.map(a => {
+        const annonce = new Annonce(a);
+        if (annonce.liked) {
+            res.push(annonce)
+        }
+    })
+    return res;
 }
 
 export function create(annonce) {

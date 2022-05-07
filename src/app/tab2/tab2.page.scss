@@ -1,21 +1,28 @@
 .annonces-list .annonces-item {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80%;
-  margin: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
 }
+
 .annonces-list .annonce-card {
-  position: relative;
-  cursor: pointer;
-  width: 100%;
+    position: relative;
+    cursor: pointer;
+    width: 100%;
 }
+
 .annonces-list img {
-  width: 300px;
+    width: 300px;
 }
+
 .cardfooter {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.likeButton {
+    background-color: white;
 }
