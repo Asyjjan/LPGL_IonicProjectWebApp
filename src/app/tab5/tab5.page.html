@@ -1,44 +1,58 @@
-<div class="header">
-    <ion-header [translucent]="true">
-        <ion-toolbar>
-            <ion-title>
-                Profil
-            </ion-title>
-        </ion-toolbar>
-    </ion-header>
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-title>
+            Profil
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
 
 
 
-    <h2>Consultant</h2>
-    <div class="space">
-        <div class="name">
-            <h3>{{user['_prenom']}}</h3>
+<ion-content>
+    <div class="header">
+        <h2>Consultant</h2>
+        <div class="space">
+            <div class="name">
+                <h3>{{user['_prenom']}}</h3>
+            </div>
+            <div class="flex">
+                <img class="img-profil" src="../../assets/mignon.jpg" alt="user">
+            </div>
         </div>
-        <div class="flex">
-            <img class="img-profil" src="../../assets/mignon.jpg" alt="user">
-        </div>
+        <ion-icon class="disconnect-btn" name="log-out-outline" (click)="logout()"></ion-icon>
     </div>
-    <ion-icon class="disconnect-btn" name="log-out-outline" (click)="logout()"></ion-icon>
+    <div className="profil_infos">
 
 
-</div>
-
-<ion-chip>
-    <ion-label>Identité : {{user['_nom']}} {{user['_prenom']}}</ion-label>
-</ion-chip>
-
-<ion-chip color="secondary">
-    <ion-label color="dark">Adresse email : {{user['_email']}}</ion-label>
-</ion-chip>
-
-<ion-chip color="secondary">
-    <ion-label color="dark">Téléphone : {{user['_telephone']}} </ion-label>
-</ion-chip>
-
-<ion-chip color="secondary">
-    <ion-label color="dark">Addresse : {{user["_addresse"]}}</ion-label>
-</ion-chip>
-
-<ion-chip color="secondary">
-    <ion-text color="dark">Préférences</ion-text>
-</ion-chip>
+        <ion-row>
+            <ion-chip color="secondary">
+                <input *ngIf="itemEditing.path==='nom'" type="text" [value]="user['_nom']" />
+                <ion-label *ngIf="itemEditing.path!=='nom'" color="dark" (click)="onInfosClick('nom')">Nom : {{user['_nom']}}</ion-label>
+            </ion-chip>
+        </ion-row>
+        <ion-row>
+            <ion-chip color="secondary">
+                <input *ngIf="itemEditing.path==='prenom'" type="text" [value]="user['_prenom']" />
+                <ion-label *ngIf="itemEditing.path!=='prenom'" color="dark" (click)="onInfosClick('prenom')">Prénom : {{user['_prenom']}}</ion-label>
+            </ion-chip>
+        </ion-row>
+        <ion-row>
+            <ion-chip color="secondary">
+                <input *ngIf="itemEditing.path==='email'" type="text" [value]="user['_email']" />
+                <ion-label *ngIf="itemEditing.path!=='email'" color="dark" (click)="onInfosClick('email')">Adresse email : {{user['_email']}}</ion-label>
+            </ion-chip>
+        </ion-row>
+        <ion-row>
+            <ion-chip color="secondary">
+                <input *ngIf="itemEditing.path==='telephone'" type="text" [value]="user['_telephone']" />
+                <ion-label *ngIf="itemEditing.path!=='telephone'" color="dark" (click)="onInfosClick('telephone')">Téléphone : {{user['_telephone']}} </ion-label>
+            </ion-chip>
+        </ion-row>
+        <ion-row>
+            <ion-chip color="secondary">
+                <input *ngIf="itemEditing.path==='addresse'" type="text" [value]="user['_addresse']" />
+                <ion-label *ngIf="itemEditing.path!=='addresse'" color="dark" (click)="onInfosClick('addresse')">Addresse : {{user["_addresse"]}}</ion-label>
+            </ion-chip>
+        </ion-row>
+    </div>
+</ion-content>

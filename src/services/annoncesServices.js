@@ -1,5 +1,6 @@
 import annonces from '../assets/data/annonces.json'
 
+
 export function findAll() {
  return annonces;
 

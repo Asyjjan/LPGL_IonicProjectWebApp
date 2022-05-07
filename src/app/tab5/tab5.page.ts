@@ -10,6 +10,7 @@ import { UserDataService } from '../services/user-data.service';
 })
 export class Tab5Page {
   public user: Utilisateur;
+  public itemEditing = { path: "" }
   constructor(public userDataService: UserDataService, public router: Router) {
     this.user = this.userDataService.getUser();
     console.log(this.user)
@@ -19,6 +20,11 @@ export class Tab5Page {
   logout() {
     this.userDataService.logout();
     this.router.navigate(['/'])
+  }
+
+  onInfosClick(path) {
+    this.itemEditing = { path: path }
+    console.log(this.itemEditing)
   }
 
 }
