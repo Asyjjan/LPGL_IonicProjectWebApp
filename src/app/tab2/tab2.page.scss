@@ -26,3 +26,14 @@
 .filters .filter {
  width: 25%
 }
+
+ion-list{
+    background-color:rgb(234, 248, 234);
+}
+ion-item{
+    --background:rgb(234, 248, 234);
+}
+ion-toolbar {
+    --background: green;
+    --color: white;
+   }
