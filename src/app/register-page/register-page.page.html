@@ -7,31 +7,31 @@
 <ion-content>
   <form [formGroup]="registerForm" (ngSubmit)="submit()" novalidate class="ion-text-center margin_form">
     
+    <ion-item class="arrondi">
+      <ion-input type="text" formControlName="nom" placeholder="Nom..."></ion-input>
+    </ion-item>
+    <br>
+    <ion-item class="arrondi">
+      <ion-input type="text" formControlName="prenom" placeholder="Prénom..."></ion-input>
+    </ion-item>
+    <br>
+    <ion-item class="arrondi">
+      <ion-input type="text" formControlName="email" placeholder="Adresse mail..."></ion-input>
+    </ion-item>
+    <br>
+    <ion-item class="arrondi">
+      <ion-input type="text" formControlName="pseudo" placeholder="Nom d'utilisateur..."></ion-input>
+    </ion-item>
+    <br>
+    <ion-item class="arrondi">
+      <ion-input type="text" formControlName="mdp" placeholder="Mot de passe..."></ion-input>
+    </ion-item>
+    <br>
+    <ion-item class="arrondi">
+      <ion-input type="text" formControlName="telephone" placeholder="N° de téléphone..."></ion-input>
+    </ion-item>
 
-    <ion-item>
-      <ion-label position="stacked">Nom</ion-label>
-      <ion-input type="text" formControlName="nom"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked">Prénom</ion-label>
-      <ion-input type="text" formControlName="prenom"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked" >Adresse mail</ion-label>
-      <ion-input type="text" formControlName="email"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked">Nom d'utilisateur</ion-label>
-      <ion-input type="text" formControlName="pseudo"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked">Mot de passe</ion-label>
-      <ion-input type="password" formControlName="mdp"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked">N° de téléphone</ion-label>
-      <ion-input type="text" formControlName="telephone"></ion-input>
-    </ion-item>
+    
     <ion-button type="submit" [disabled]="!registerForm.valid">Valider</ion-button>
     <div class="has-account-div"><a href="./tabs/login">Déjà un compte ?</a></div>
   </form>
