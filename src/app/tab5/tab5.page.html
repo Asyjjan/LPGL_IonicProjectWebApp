@@ -1,46 +1,44 @@
 <div class="header">
-  <ion-header [translucent]="true">
-    <ion-toolbar>
-      <ion-title>
-        Profil
-      </ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-header [translucent]="true">
+        <ion-toolbar>
+            <ion-title>
+                Profil
+            </ion-title>
+        </ion-toolbar>
+    </ion-header>
 
 
 
-  <h2>Consultant</h2>
-  <div class="space">
-    <div class="name">
-      <h3>{{user.pseudo}}</h3>
+    <h2>Consultant</h2>
+    <div class="space">
+        <div class="name">
+            <h3>{{user['_prenom']}}</h3>
+        </div>
+        <div class="flex">
+            <img class="img-profil" src="../../assets/mignon.jpg" alt="user">
+        </div>
     </div>
-    <div class="flex">
-      <img class="img-profil" src="../../assets/mignon.jpg" alt="user">
-    </div>
-  </div>
-  <ion-icon  class="disconnect-btn" name="log-out-outline" (click)="logout()"></ion-icon>
+    <ion-icon class="disconnect-btn" name="log-out-outline" (click)="logout()"></ion-icon>
 
-  
+
 </div>
 
 <ion-chip>
-  <ion-label>Identité : {{user.name}}  {{user.prenom}}</ion-label>
+    <ion-label>Identité : {{user['_nom']}} {{user['_prenom']}}</ion-label>
 </ion-chip>
 
 <ion-chip color="secondary">
-  <ion-label color="dark">Adresse email : {{user.email}}</ion-label>
+    <ion-label color="dark">Adresse email : {{user['_email']}}</ion-label>
 </ion-chip>
 
 <ion-chip color="secondary">
-  <ion-label color="dark">Téléphone : {{user.telephone}} </ion-label>
+    <ion-label color="dark">Téléphone : {{user['_telephone']}} </ion-label>
 </ion-chip>
 
 <ion-chip color="secondary">
-  <ion-label color="dark">adresse : {{user.addresse}}</ion-label>
+    <ion-label color="dark">Addresse : {{user["_addresse"]}}</ion-label>
 </ion-chip>
 
 <ion-chip color="secondary">
-  <ion-text color="dark">Préférences</ion-text>
+    <ion-text color="dark">Préférences</ion-text>
 </ion-chip>
-
-<ion-button color="success" (click)="editProfil()">Modifier</ion-button>

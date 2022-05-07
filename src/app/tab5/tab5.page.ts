@@ -10,12 +10,13 @@ import { UserDataService } from '../services/user-data.service';
 })
 export class Tab5Page {
   public user: Utilisateur;
-  constructor(public userDataService: UserDataService , public router : Router) {
+  constructor(public userDataService: UserDataService, public router: Router) {
     this.user = this.userDataService.getUser();
+    console.log(this.user)
   }
 
 
-  logout(){
+  logout() {
     this.userDataService.logout();
     this.router.navigate(['/'])
   }
