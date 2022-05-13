@@ -12,8 +12,8 @@
         <ion-searchbar placeholder="Rechercher..." class="ion-searchbar" [(ngModel)]="searchQuery"></ion-searchbar>
         <ion-row class="filters">
             <ion-col class="filter">
-                <ion-label>Espèce</ion-label>
-                <ion-select className="espece_select" (ionChange)="onFilterChange('espece' ,$event)" value="">
+                <ion-label style="padding-left: 35px">Espèce</ion-label>
+                <ion-select (ionChange)="onFilterChange('espece' ,$event)" value="">
                     <ion-select-option value=""></ion-select-option>
                     <ion-select-option *ngFor="let espece of getEspeces()" [value]="espece">
                         {{espece}}
@@ -21,8 +21,8 @@
                 </ion-select>
             </ion-col>
             <ion-col class="filter">
-                <ion-label>Genre</ion-label>
-                <ion-select className="espece_select" (ionChange)="onFilterChange('genre' ,$event)" value="">
+                <ion-label style="padding-left: 35px">Genre</ion-label>
+                <ion-select (ionChange)="onFilterChange('genre' ,$event)" value="">
                     <ion-select-option value=""></ion-select-option>
                     <ion-select-option *ngFor="let genre of getGenre()" [value]="genre">
                         {{genre}}
@@ -30,8 +30,8 @@
                 </ion-select>
             </ion-col>
             <ion-col class="filter">
-                <ion-label>Lieu</ion-label>
-                <ion-select className="espece_select" (ionChange)="onFilterChange('lieu' ,$event)" value="">
+                <ion-label style="padding-left: 35px">Lieu</ion-label>
+                <ion-select (ionChange)="onFilterChange('lieu' ,$event)" value="">
                     <ion-select-option value=""></ion-select-option>
                     <ion-select-option *ngFor="let lieu of getLieux()" [value]="lieu">
                         {{lieu}}
@@ -47,7 +47,7 @@
                 <ion-grid>
                     <ion-row>
                         <ion-col>
-                            <img src='{{"../../assets/img/"+annonce["animal"]["photo"]}}' (click)="goToDetail(annonce['animal'])">
+                            <img height="100" width="70" src='{{"../../assets/img/"+annonce["animal"]["photo"]}}' (click)="goToDetail(annonce['animal'])">
                         </ion-col>
                         <ion-col>
                             <ion-card-title>
@@ -62,7 +62,7 @@
                             </ion-card-content>
                             <ion-row class="cardfooter">
                                 <button (click)="clickOnLikeButton(annonce)" ion-button block>
-                                    <ion-icon name="heart"></ion-icon>        
+                                    <ion-icon name="heart"></ion-icon>
                                 </button>
                                 <span class="annonce-lieu">{{annonce["animal"]["lieu"]}}</span>
                             </ion-row>

@@ -44,7 +44,13 @@
 }
 
 .filters .filter {
-    width: 25%
+    width: 25%;
+    border: black 1px solid;
+}
+
+.filter:hover{
+  color: black;
+  background-color: lawngreen;
 }
 
 ion-list {
@@ -58,4 +64,8 @@ ion-item {
 ion-toolbar {
     --background: green;
     --color: white;
+}
+
+.select:hover{
+  background-color: blue;
 }

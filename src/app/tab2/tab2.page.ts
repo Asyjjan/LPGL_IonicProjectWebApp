@@ -1,17 +1,10 @@
-import { Component } from '@angular/core';
-import {
-  findAll as findAllAnnonces,
-  update,
-} from '../../services/annoncesServices.js';
-import { findById as findUserById } from '../../services/userServices.js';
-import {
-  findById as findAnimalById,
-  findAllPath,
-} from '../../services/animauxServices.js';
-import _ from 'lodash';
-import { Annonce } from '../services/annonce';
-import { Router } from '@angular/router';
-
+import {Component} from '@angular/core';
+import {findAll as findAllAnnonces, update} from '../../services/annoncesServices.js';
+import {findById as findUserById } from '../../services/userServices.js';
+import {findById as findAnimalById, findAllPath} from '../../services/animauxServices.js';
+import {Annonce} from '../services/annonce';
+import {Router} from '@angular/router';
+import { ElementRef } from '@angular/core';
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
@@ -21,6 +14,7 @@ export class Tab2Page {
   public annonces: [];
   private filters = {};
   public searchQuery = '';
+  private elementRef: ElementRef;
 
   constructor(public router: Router) {
     this.annonces = findAllAnnonces().map((a) => {
@@ -71,7 +65,15 @@ export class Tab2Page {
 
   clickOnLikeButton(annonce) {
     annonce.liked = !annonce.liked;
-    console.log(annonce);
     update(annonce);
+  }
+
+  // eslint-disable-next-line @angular-eslint/use-lifecycle-interface
+  ngOnInit(): void {
+    this.setStyle('white');
+  }
+
+  setStyle(value: string): void {
+    this.elementRef.nativeElement.style.setProperty('--my-var', value);
   }
 }
