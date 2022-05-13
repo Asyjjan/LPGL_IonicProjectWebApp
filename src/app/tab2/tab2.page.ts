@@ -1,9 +1,8 @@
-import { BddService } from './../../services/BddService';
 import { Component } from '@angular/core';
-import { findAll, update } from '../../services/annoncesServices.js'
+import {findAll as findAllAnnonces, update } from '../../services/annoncesServices.js'
 import { findById as findUserById } from '../../services/userServices.js'
 import { findById as findAnimalById, findAllPath } from '../../services/animauxServices.js'
-import _ from 'lodash'
+import _ from 'lodash';
 import { Annonce } from '../services/annonce';
 import { Router } from '@angular/router';
 
@@ -18,8 +17,7 @@ export class Tab2Page {
   public searchQuery = "";
 
   constructor(public router: Router) {
-    const bdd = new BddService()
-    this.annonces = bdd.getAllAnnonces().map(a => {
+    this.annonces = findAllAnnonces().map(a => {
       const annonce = new Annonce(a)
       annonce.animal = findAnimalById(a.animalId)
       annonce.auteur = findUserById(a.auteurId)
@@ -63,23 +61,9 @@ export class Tab2Page {
   }
 
   clickOnLikeButton(annonce){
-    console.log("J'ai cliquer sur le bouton like")
-    console.log(annonce)
-    if(annonce["liked"]){
-      annonce["liked"] = false;
-      this.removeFromFavoris(annonce);
-    }else{
-      annonce["liked"] = true;
-      update(annonce)
-      this.addToFavoris(annonce);
-    }
+    annonce.liked = !annonce.liked;
+    console.log(annonce);
+    update(annonce);
   }
 
-  addToFavoris(annonce){
-    
-  }
-
-  removeFromFavoris(annonce){
-
-  }
 }

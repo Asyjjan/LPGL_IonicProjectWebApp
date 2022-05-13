@@ -1,14 +1,15 @@
-import { annonces } from '../assets/data/annonces';
+/*import { annonces } from '../assets/data/annonces';
 import { users } from '../assets/data/users';
 import { messages } from '../assets/data/message';
 import { animaux } from '../assets/data/animaux';
-import { Animal } from "../src/app/services/animal";
-import { User } from "../src/app/services/user"
+import { Animal } from "src/app/services/animal";
+import { Utilisateur } from "src/app/services/user"
+import { Annonce } from 'src/app/services/annonce';
 
 export class BddService {
 
     private annonces = Annonce[];
-    private users = User[];
+    private users = Utilisateur[];
     private messages = [];
     private animaux = Animal[];
 
@@ -34,4 +35,4 @@ export class BddService {
     public getAllAnimaux() {
         return this.animaux
     }
-}
+}*/
