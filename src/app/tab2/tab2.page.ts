@@ -14,7 +14,9 @@ export class Tab2Page {
   public annonces: [];
   private filters = {};
   public searchQuery = '';
-  private elementRef: ElementRef;
+  public items = [
+    {name:'like', active:false},
+  ];
 
   constructor(public router: Router) {
     this.annonces = findAllAnnonces().map((a) => {
@@ -68,12 +70,8 @@ export class Tab2Page {
     update(annonce);
   }
 
-  // eslint-disable-next-line @angular-eslint/use-lifecycle-interface
-  ngOnInit(): void {
-    this.setStyle('white');
-  }
-
-  setStyle(value: string): void {
-    this.elementRef.nativeElement.style.setProperty('--my-var', value);
+  toggleClass(item, annonce){
+    this.clickOnLikeButton(annonce);
+    item.active = !item.active;
   }
 }
