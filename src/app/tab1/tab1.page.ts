@@ -32,4 +32,8 @@ export class Tab1Page {
 
     this.annonces = this.annonces.slice(0, 3);
   }
+
+  goToDetail(animal) {
+    this.router.navigate(['/detail-animal'], { state: { animal } });
+  }
 }

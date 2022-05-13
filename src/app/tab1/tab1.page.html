@@ -16,7 +16,7 @@
             </ion-title>
         </ion-item>
 
-        <ion-item *ngFor="let annonce of annonces" class="annonces-item">
+        <ion-item *ngFor="let annonce of annonces | slice :0:3" class="annonces-item">
             <ion-card class="annonce-card">
                 <ion-grid>
                     <ion-row>
