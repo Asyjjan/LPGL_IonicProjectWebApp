@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Annonce } from '../services/annonce';
-import { findAll as findAllAnnonces } from '../../services/annoncesServices.js';
+import {
+  findAll as findAllAnnonces,
+  update,
+} from '../../services/annoncesServices.js';
 import { findById as findUserById } from '../../services/userServices.js';
 import { findById as findAnimalById } from '../../services/animauxServices.js';
 
@@ -29,7 +32,14 @@ export class Tab3Page {
       }
     });
   }
-  voirDetail() {
-    this.router.navigate(['detail-animal']);
+  goToDetail(animal) {
+    this.router.navigate(['/detail-animal'], { state: { animal } });
+  }
+  removeFavoris(annonce) {
+    annonce.liked = false;
+    update(annonce);
+    this.likedAnnonces = this.likedAnnonces.filter(
+      (a) => a['_annonceId'] != annonce['_annonceId']
+    );
   }
 }

@@ -16,140 +16,36 @@
             </ion-title>
         </ion-item>
 
-        <ion-item class="ion-no-border">
-            <div class="ion-otherToolbar">
-                <ion-item>
-                    <ion-card>
-                        <ion-card-header>
-                            <ion-card-title>Annonce 1</ion-card-title>
-                            <ion-card-subtitle>sous-titre </ion-card-subtitle>
-
-                        </ion-card-header>
-
-                        <ion-card-content>
-                            le paragraphe numéro 1
-                            <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-                                <ion-fab-button>
-                                    <ion-icon name="arrow-forward-outline"></ion-icon>
-                                </ion-fab-button>
-                            </ion-fab>
-                        </ion-card-content>
-
-                    </ion-card>
-                </ion-item>
-
-                <ion-item>
-                    <ion-card>
-                        <ion-card-header>
-                            <ion-card-title>Annonce 2</ion-card-title>
-                            <ion-card-subtitle>sous-titre 2</ion-card-subtitle>
-
-                        </ion-card-header>
-
-                        <ion-card-content>
-                            le paragraphe numéro 2
-                            <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-                                <ion-fab-button>
-                                    <ion-icon name="arrow-forward-outline"></ion-icon>
-                                </ion-fab-button>
-                            </ion-fab>
-                        </ion-card-content>
-
-                    </ion-card>
-                </ion-item>
-                <ion-item>
-                    <ion-card>
-                        <ion-card-header>
-                            <ion-card-title>Annonce 3</ion-card-title>
-                            <ion-card-subtitle>sous-titre 3</ion-card-subtitle>
-
-                        </ion-card-header>
-
-                        <ion-card-content>
-                            le paragraphe numéro 3
-                            <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-                                <ion-fab-button>
-                                    <ion-icon name="arrow-forward-outline"></ion-icon>
-                                </ion-fab-button>
-                            </ion-fab>
-                        </ion-card-content>
-
-                    </ion-card>
-                </ion-item>
-
-            </div>
+        <ion-item *ngFor="let annonce of annonces" class="annonces-item">
+            <ion-card class="annonce-card">
+                <ion-grid>
+                    <ion-row>
+                        <ion-col>
+                            <img src='{{"../../assets/img/"+annonce["animal"]["photo"]}}'
+                                (click)="goToDetail(annonce['animal'])">
+                        </ion-col>
+                        <ion-col>
+                            <ion-card-title>
+                                {{annonce["titre"]}}
+                            </ion-card-title>
+                            <ion-card-subtitle>
+                                {{annonce["datePublication"]}}
+                            </ion-card-subtitle>
+                            <ion-card-content>
+                                <div>{{annonce["animal"]["race"]}} - {{annonce["animal"]["genre"]}}</div>
+        
+                            </ion-card-content>
+                            <ion-row class="cardfooter">
+                                
+                                <span class="annonce-lieu">{{annonce["animal"]["lieu"]}}</span>
+                            </ion-row>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-card>
+        
         </ion-item>
     </div>
 
-    <div>
-        <ion-item>
-            <ion-title>
-                Les annonces les moins chères:
-            </ion-title>
-        </ion-item>
-
-        <ion-item class="ion-no-border">
-            <div class="ion-otherToolbar">
-                <ion-item>
-                    <ion-card>
-                        <ion-card-header>
-                            <ion-card-title>Annonce 4</ion-card-title>
-                            <ion-card-subtitle>sous-titre 4</ion-card-subtitle>
-
-                        </ion-card-header>
-
-                        <ion-card-content>
-                            le paragraphe numéro 4
-                            <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-                                <ion-fab-button>
-                                    <ion-icon name="arrow-forward-outline"></ion-icon>
-                                </ion-fab-button>
-                            </ion-fab>
-                        </ion-card-content>
-
-                    </ion-card>
-                </ion-item>
-
-                <ion-item>
-                    <ion-card>
-                        <ion-card-header>
-                            <ion-card-title>Annonce 5</ion-card-title>
-                            <ion-card-subtitle>sous-titre 5</ion-card-subtitle>
-
-                        </ion-card-header>
-
-                        <ion-card-content>
-                            le paragraphe numéro 5
-                            <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-                                <ion-fab-button>
-                                    <ion-icon name="arrow-forward-outline"></ion-icon>
-                                </ion-fab-button>
-                            </ion-fab>
-                        </ion-card-content>
-
-                    </ion-card>
-                </ion-item>
-                <ion-item>
-                    <ion-card>
-                        <ion-card-header>
-                            <ion-card-title>Annonce 6</ion-card-title>
-                            <ion-card-subtitle>sous-titre 6</ion-card-subtitle>
-
-                        </ion-card-header>
-
-                        <ion-card-content>
-                            le paragraphe numéro 6
-                            <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-                                <ion-fab-button>
-                                    <ion-icon name="arrow-forward-outline"></ion-icon>
-                                </ion-fab-button>
-                            </ion-fab>
-                        </ion-card-content>
-
-                    </ion-card>
-                </ion-item>
-
-            </div>
-        </ion-item>
-    </div>
+    
 </ion-content>
