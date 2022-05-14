@@ -2,11 +2,14 @@
     display: grid;
     justify-content: flex-end;
     padding: 10px 10px 0px 10px;
+    margin-left: auto;
 }
-ion-toolbar{
+
+ion-toolbar {
     --background: green;
-    --color:white;
+    --color: white;
 }
-ion-content{
-    --background:rgb(234, 248, 234);
+
+ion-content {
+    --background: rgb(234, 248, 234);
 }

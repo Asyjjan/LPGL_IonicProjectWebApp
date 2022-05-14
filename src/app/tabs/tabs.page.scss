@@ -4,16 +4,23 @@
     padding-top: 2px;
 }
 
-ion-tab-bar{
-    --background:green;
-    --color:white;
-    --color-selected:black;
-    --background-focused:rgb(62, 145, 62);
+ion-tab-bar {
+    --background: green;
+    --color: white;
+    --color-selected: black;
+    --background-focused: rgb(62, 145, 62);
 }
+
 .header h2 {
     color: white;
     font-weight: bold;
     text-align: center;
+    border-radius: 15px;
+}
+
+.disconnect-btn {
+    padding: 15px;
+
 }
 
 .img-profil {
