@@ -16,7 +16,7 @@
                 <ion-thumbnail item-start>
                     <img src='{{"../../assets/img/"+annonce["animal"]["photo"]}}'>
                 </ion-thumbnail>
-                <h2>{{annonce["titre"]}}</h2>
+                <h2 class="title">{{annonce["titre"]}}</h2>
                 <div class="space">
                     <ion-button (click)="goToDetail(annonce['animal'])">Voir</ion-button>
                     <ion-button color="danger" (click)="removeFavoris(annonce)">Supprimer</ion-button>

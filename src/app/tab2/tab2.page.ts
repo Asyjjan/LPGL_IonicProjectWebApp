@@ -69,9 +69,4 @@ export class Tab2Page {
     annonce.liked = !annonce.liked;
     update(annonce);
   }
-
-  toggleClass(item, annonce){
-    this.clickOnLikeButton(annonce);
-    item.active = !item.active;
-  }
 }

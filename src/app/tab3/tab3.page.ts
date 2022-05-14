@@ -14,7 +14,6 @@ import { findById as findAnimalById } from '../../services/animauxServices.js';
   styleUrls: ['tab3.page.scss'],
 })
 export class Tab3Page {
-  pet: string = 'chiens';
   public annonces: Annonce[];
   public likedAnnonces: Annonce[] = [];
 
