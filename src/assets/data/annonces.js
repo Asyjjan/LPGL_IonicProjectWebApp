@@ -15,7 +15,7 @@ export const annonces = [
     titre: "Titre",
     datePublication: "2022/04/30",
     prix: 500,
-    liked: true,
+    liked: false,
   },
   {
     annonceId: 3,

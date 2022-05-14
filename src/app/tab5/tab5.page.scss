@@ -12,7 +12,6 @@
 }
 
 #green {
-  border-radius: 15px;
   padding: 10px;
 }
 
@@ -47,7 +46,6 @@
 .flex {
   display: flex;
   justify-content: center;
-  margin-top: -60px;
 }
 
 .disconnect-btn {
@@ -57,4 +55,21 @@
   cursor: pointer;
   font-size: 32px;
   color: white;
+}
+
+ion-toolbar {
+  --background: green;
+  --color: white;
+}
+
+ion-content {
+  --background: rgb(234, 248, 234);
+}
+
+.profilInfoDIV{
+  padding-top: 10px;
+}
+div .profilInfo{
+    justify-content: center;
+    margin: 5px;
 }
