@@ -1,4 +1,4 @@
-# LPGL_IonicProjectWebApp
+# Petova
 
 ## Installation
 
